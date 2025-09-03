@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 def uppercase(str):
-    if ord(str) in range(65, 90):
-        return True
-    else:
-        return False
+    for c in str:
+        if ord(c) in range(97, 123):
+            print(chr(ord(c) - 32), end="")
+        else:
+            print(c, end="")
