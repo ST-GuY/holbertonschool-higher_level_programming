@@ -5,7 +5,9 @@ def uppercase(str):
     # Initialisation d'une chaîne vide pour stocker le résultat final
 
     for c in str:  # Boucle sur chaque caractère 'c' de la chaîne d'entrée
-        if 97 <= ord(c) <= 122:  # (ASCII de 'a' = 97 à 'z' = 122)
+        # ord(c) transforme le caractère c en son code ASCII.
+        # 'a' = 97 à 'z' = 122
+        if 97 <= ord(c) <= 122:
             result += chr(ord(c) - 32)  # Convertit la minuscule en majuscule
         else:
             result += c
