@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
-import sys               # On importe le module sys, qui permet d'accéder à sys.argv (la liste des arguments)
-
+import sys
 
 def main():
 
