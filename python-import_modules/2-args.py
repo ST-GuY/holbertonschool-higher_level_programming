@@ -2,6 +2,7 @@
 
 import sys
 
+
 def main():
 
     nb_argument = len(sys.argv) - 1
