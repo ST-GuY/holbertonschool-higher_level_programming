@@ -1,25 +1,20 @@
->>> from 3-say_my_name import say_my_name
+>>> from 3_say_my_name import say_my_name
 
-# Test normal avec prénom et nom
 >>> say_my_name("John", "Smith")
 My name is John Smith
 
-# Test normal avec seulement le prénom
 >>> say_my_name("Bob")
 My name is Bob 
 
-# Test levée d'erreur si first_name n'est pas une chaîne
 >>> say_my_name(12, "White")
 Traceback (most recent call last):
     ...
 TypeError: first_name must be a string
 
-# Test levée d'erreur si last_name n'est pas une chaîne
 >>> say_my_name("Walter", 123)
 Traceback (most recent call last):
     ...
 TypeError: last_name must be a string
 
-# Test prénom et nom vides (chaînes vides)
 >>> say_my_name("", "")
 My name is  
