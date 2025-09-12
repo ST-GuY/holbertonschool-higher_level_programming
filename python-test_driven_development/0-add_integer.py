@@ -15,10 +15,14 @@ def add_integer(a, b=98):
     Retour:
         int: la somme de a et b
     """
-    if not isinstance(a, int) and not isinstance(a, float):
-        raise TypeError("a must be an integer")
+    # Vérification des types
     if not isinstance(b, int) and not isinstance(b, float):
         raise TypeError("b must be an integer")
-    a = round(a)
-    b = round(b)
-    return a + b
+    if not isinstance(a, int) and not isinstance(a, float):
+        raise TypeError("a must be an integer")
+
+    # Gestion des infinis
+    if a == float('inf') or a == float('-inf') or b == float('inf') or b == float('-inf'):
+        raise OverflowError("Cannot add infinity")
+
+    return int(a) + int(b)
