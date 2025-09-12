@@ -1,0 +1,49 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> add_integer(1, 100)
+101
+
+>>> add_integer(100)
+198
+
+>>> add_integer(1.9, 100.1)
+102
+
+>>> add_integer(-100, 1)
+-99
+
+>>> add_integer(3.9, -2.1)
+1
+
+>>> add_integer("3", 2)
+Traceback (most recent call last):
+	...
+TypeError: a must be an integer
+>>> add_integer(3, "2")
+Traceback (most recent call last):
+	...
+TypeError: b must be an integer
+>>> add_integer(None, 5)
+Traceback (most recent call last):
+	...
+TypeError: a must be an integer
+>>> add_integer(5, None)
+Traceback (most recent call last):
+	...
+TypeError: b must be an integer
+>>> add_integer(5, [1, 2])
+Traceback (most recent call last):
+	...
+TypeError: b must be an integer
+>>> add_integer([1, 2], 5)
+Traceback (most recent call last):
+	...
+TypeError: b must be an integer
+>>> add_integer(float('inf'), 1)
+Traceback (most recent call last):
+	...
+OverflowError
+>>> add_integer(1, float('inf'))
+Traceback (most recent call last):
+	...
+OverflowError
