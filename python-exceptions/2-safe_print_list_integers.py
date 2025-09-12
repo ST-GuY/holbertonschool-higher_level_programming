@@ -6,8 +6,6 @@ def safe_print_list_integers(my_list=[], x=0):
         try:
             print("{:d}".format(my_list[i]), end="")
             count += 1
-        except IndexError:
-            break  # On arrête si on dépasse la longueur de la liste
         except (ValueError, TypeError):
             pass  # On ignore les éléments qui ne sont pas des entiers
         finally:
