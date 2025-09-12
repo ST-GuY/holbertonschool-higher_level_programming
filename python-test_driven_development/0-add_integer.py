@@ -11,7 +11,7 @@ def add_integer(a, b=98):
     a et b doivent être des entiers ou des flottants.
     Les flottants sont convertis en entiers avant l'addition.
     b a une valeur par défaut de 98.
-    
+
     Retour:
         int: la somme de a et b
     """
