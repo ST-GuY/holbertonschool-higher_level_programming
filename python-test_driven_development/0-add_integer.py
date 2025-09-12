@@ -22,7 +22,8 @@ def add_integer(a, b=98):
         raise TypeError("a must be an integer")
 
     # Gestion des infinis
-    if a == float('inf') or a == float('-inf')
+    if a == float('inf') or a == float('-inf'):
+        raise OverflowError("Cannot add infinity")
     if b == float('inf') or b == float('-inf'):
         raise OverflowError("Cannot add infinity")
 
