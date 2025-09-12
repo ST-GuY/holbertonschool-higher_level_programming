@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+Module contenant la fonction say_my_name qui affiche
+le prénom et le nom d'une personne.
+"""
+
+
 def say_my_name(first_name, last_name=""):
     if not isinstance(first_name, str):
         raise TypeError("first_name must be a string")
