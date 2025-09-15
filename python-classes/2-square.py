@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 class Square:
     """Represents a square.
+
     This class defines a square by its size. It validates that the size is
     a non-negative integer.
     """
+
     def __init__(self, size=0):
         """Initialize a Square instance.
 
@@ -14,10 +16,8 @@ class Square:
             TypeError: If `size` is not an integer.
             ValueError: If `size` is less than 0.
         """
-
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
-
