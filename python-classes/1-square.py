@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Classe qui définit un carré avec un attribut privé size."""
+
+
 class Square:
     """Classe qui définit un carré avec un attribut privé size."""
 
