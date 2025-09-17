@@ -5,7 +5,6 @@
 class Rectangle:
     """Classe qui définit un rectangle par sa largeur et sa hauteur."""
 
-
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
