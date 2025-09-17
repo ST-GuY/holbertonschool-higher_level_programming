@@ -5,21 +5,10 @@
 class Square:
     """Class that defines a square by its size."""
 
-    def __init__(self, size=0):
-        """Initialize a square with an optional size.
-
-        Args:
-            size (int, optional): Size of the square. Defaults to 0.
-
-        Raises:
-            TypeError: If size is not an integer.
-            ValueError: If size is less than 0.
-        """
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise ValueError("size must be >= 0")
-        self.__size = size
+    def __init__(self, size=0, position=(0, 0)):
+        """Initialise un carré avec taille et position optionnelles."""
+        self.size = size  # Utilise le setter → vérification automatique
+        self.position = position
 
     @property
     def size(self):
@@ -64,3 +53,5 @@ class Square:
             print()
         for _ in range(self.__size):
             print("#" * self.__size)
+
+
