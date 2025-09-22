@@ -1,8 +1,21 @@
 #!/usr/bin/python3
+"""
+Ce module définit la classe MyList qui hérite de list.
+Il ajoute une méthode publique print_sorted qui affiche
+les éléments de la liste dans l'ordre croissant sans
+modifier la liste originale.
+"""
+
+
 class MyList(list):
-    """Une sous-classe de list avec une méthode supplémentaire pour afficher la liste triée."""
+    """
+    Classe qui hérite de list et fournit une méthode
+    pour afficher la liste triée en ordre croissant.
+    """
 
     def print_sorted(self):
-        """Tri et affiche la liste en place"""
+        """
+        Affiche les éléments de la liste dans l'ordre croissant
+        sans modifier la liste originale.
+        """
         print(sorted(self))
-
