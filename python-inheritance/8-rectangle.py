@@ -1,6 +1,12 @@
 #!/usr/bin/python3
+"""
+Module 8-rectangle
+Defines a Rectangle class that inherits from BaseGeometry.
+"""
+
+
 class Rectangle:
-    """verifie si ce sont des entier positif"""
+    """Rectangle class that inherits from BaseGeometry."""
 
 
 def __init__(self, width, height):
@@ -8,11 +14,3 @@ def __init__(self, width, height):
     self.integer_validator("height", height)
     self.__width = width
     self.__height = height
-
-
-def area(self):
-    """return l'air d'un rectangle"""
-    return self.__width * self.__height
-
-
-def 
