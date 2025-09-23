@@ -3,7 +3,7 @@ Defines a BaseGeometry class with area() and integer_validator().
 
 Doctests:
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
->>> bg = BaseGeometry()  # instantiation works
+>>> bg = BaseGeometry() bg.integer_validator(“age”, 0)
 
 Valid integer should pass silently:
 >>> bg.integer_validator("age", 5)
@@ -15,7 +15,7 @@ Traceback (most recent call last):
 ValueError: age must be greater than 0
 
 Negative should raise ValueError:
->>> bg.integer_validator("age", -4)
+>>> bg = BaseGeometry() bg.integer_validator(“age”, -4)
 Traceback (most recent call last):
 ...
 ValueError: age must be greater than 0
