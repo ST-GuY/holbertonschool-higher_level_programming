@@ -3,22 +3,63 @@
 True
 >>> bg.integer_validator("myint", 12)
 >>> bg.integer_validator("width", 89)
+>>> bg.integer_validator("age", 1)
+
+# non-integer string -> TypeError
 >>> bg.integer_validator("name", "John")
 Traceback (most recent call last):
 ...
 TypeError: name must be an integer
+
+# zero -> ValueError
 >>> bg.integer_validator("age", 0)
 Traceback (most recent call last):
 ...
 ValueError: age must be greater than 0
+
+# negative -> ValueError
 >>> bg.integer_validator("age", -4)
 Traceback (most recent call last):
 ...
 ValueError: age must be greater than 0
+
+# float -> TypeError
 >>> bg.integer_validator("age", 13.5)
 Traceback (most recent call last):
 ...
 TypeError: age must be an integer
+
+# tuple -> TypeError
+>>> bg.integer_validator("age", (4,))
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+# list -> TypeError
+>>> bg.integer_validator("age", [3])
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+# boolean True -> TypeError (important: bool is subclass of int so use type(...) is not int)
+>>> bg.integer_validator("age", True)
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+# set -> TypeError
+>>> bg.integer_validator("age", {3, 4})
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+# None -> TypeError
+>>> bg.integer_validator("age", None)
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+# area() not implemented -> Exception
 >>> bg.area()
 Traceback (most recent call last):
 ...
