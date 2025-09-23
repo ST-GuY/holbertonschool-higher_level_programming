@@ -1,0 +1,31 @@
+BaseGeometry class tests
+========================
+
+Create an instance:
+>>> bg = BaseGeometry()
+
+Test that area() raises the correct Exception:
+>>> bg.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+
+Valid integers should pass silently:
+>>> bg.integer_validator("width", 5)
+
+Non-integer values raise TypeError:
+>>> bg.integer_validator("name", "John")
+Traceback (most recent call last):
+...
+TypeError: name must be an integer
+
+Zero or negative values raise ValueError:
+>>> bg.integer_validator("age", 0)
+Traceback (most recent call last):
+...
+ValueError: age must be greater than 0
+
+>>> bg.integer_validator("distance", -4)
+Traceback (most recent call last):
+...
+ValueError: distance must be greater than 0
