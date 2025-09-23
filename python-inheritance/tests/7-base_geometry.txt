@@ -1,12 +1,20 @@
-Module 7-base_geometry
-Defines a BaseGeometry class with area() and integer_validator().
+BaseGeometry class tests
+========================
 
-Doctests:
->>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
->>> bg = BaseGeometry() bg.integer_validator(“age”, 0)
+>>> bg = __import__('7-base_geometry').BaseGeometry()
+
+Check instantiation:
+>>> isinstance(bg, object)
+True
+
+area() should raise:
+>>> bg.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
 
 Valid integer should pass silently:
->>> bg.integer_validator("age", 5)
+>>> bg.integer_validator("age", 1)
 
 Zero should raise ValueError:
 >>> bg.integer_validator("age", 0)
@@ -15,16 +23,10 @@ Traceback (most recent call last):
 ValueError: age must be greater than 0
 
 Negative should raise ValueError:
->>> bg = BaseGeometry() bg.integer_validator(“age”, -4)
+>>> bg.integer_validator("age", -4)
 Traceback (most recent call last):
 ...
 ValueError: age must be greater than 0
-
-Float should raise TypeError:
->>> bg.integer_validator("age", 13.5)
-Traceback (most recent call last):
-...
-TypeError: age must be an integer
 
 String should raise TypeError:
 >>> bg.integer_validator("age", "4")
@@ -62,8 +64,8 @@ Traceback (most recent call last):
 ...
 TypeError: age must be an integer
 
-area() should raise Exception:
->>> bg.area()
+Float should raise TypeError:
+>>> bg.integer_validator("age", 13.5)
 Traceback (most recent call last):
 ...
-Exception: area() is not implemented
+TypeError: age must be an integer
