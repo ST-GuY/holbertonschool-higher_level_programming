@@ -23,6 +23,5 @@ class Cat(Animal):  # Création de la sous-classe Cat
 if __name__ == "__main__":
     dog = Dog()
     cat = Cat()
-
-print(dog.sound())
-print(cat.sound())
+    print(dog.sound())
+    print(cat.sound())
