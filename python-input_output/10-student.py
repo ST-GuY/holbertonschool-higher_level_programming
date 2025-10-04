@@ -4,6 +4,12 @@ Classe qui définit un étudiant avec son prénom, son nom et son âge.
 """
 
 
+class Student:
+    """
+    Classe qui définit un étudiant avec son prénom, son nom et son âge.
+    """
+
+
 def __init__(self, first_name, last_name, age):
     self.first_name = first_name
     self.last_name = last_name
