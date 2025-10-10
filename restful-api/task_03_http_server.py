@@ -18,7 +18,9 @@ class SimpleHandler(BaseHTTPRequestHandler):
         if self.path == '/data':
             data = {"name": "John", "age": 30, "city": "New York"}
             payload = json.dumps(data).encode('utf-8')
-            self._set_headers(200, 'application/json; charset=utf-8')
+            self.send_response(200)
+            self.send_header('Content-Type', 'application/json')
+            self.end_headers()
             self.wfile.write(payload)
             return
 
