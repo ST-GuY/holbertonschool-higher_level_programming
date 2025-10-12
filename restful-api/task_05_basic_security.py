@@ -47,6 +47,7 @@ users = {
 # AUTHENTIFICATION BASIQUE (Basic Auth)
 # ---------------------------------------------------------------------
 
+
 @auth.verify_password
 def verify_password(username, password):
     """
@@ -117,15 +118,17 @@ def jwt_protected():
 @app.route("/admin-only")
 @jwt_required()
 def admin_only():
-    """
-    Route accessible uniquement aux utilisateurs ayant le rôle 'admin'.
-    Si le rôle de l’utilisateur n’est pas 'admin', on renvoie une erreur 403.
-    """
-    identity = get_jwt_identity()
-    if identity["role"] != "admin":
-        return jsonify({"error": "Accès administrateur requis"}), 403
-    return jsonify(message="Admin Access: Granted"), 200
+    # Récupère les infos de l'utilisateur courant depuis le token
+    current_user = get_jwt_identity()
+    user_role = users[current_user]["role"]
 
+    # Vérifie si l'utilisateur est admin
+    if user_role != "admin":
+        # Si ce n'est pas un admin, on renvoie un JSON d'erreur + code 403
+        return jsonify({"error": "Admin access required"}), 403
+
+    # Si c’est un admin, accès accordé
+    return "Admin Access: Granted", 200
 
 # ---------------------------------------------------------------------
 # GESTION DES ERREURS JWT (toutes doivent renvoyer 401)
