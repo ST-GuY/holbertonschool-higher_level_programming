@@ -47,6 +47,7 @@ users = {
 # AUTHENTIFICATION BASIQUE (Basic Auth)
 # ---------------------------------------------------------------------
 
+
 @auth.verify_password
 def verify_password(username, password):
     """
