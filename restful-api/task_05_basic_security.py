@@ -47,7 +47,6 @@ users = {
 # AUTHENTIFICATION BASIQUE (Basic Auth)
 # ---------------------------------------------------------------------
 
-
 @auth.verify_password
 def verify_password(username, password):
     """
@@ -67,8 +66,9 @@ def basic_protected():
     """
     Route protégée par authentification basique.
     Accessible uniquement si l’utilisateur fournit de bons identifiants.
+    ⚠️ Le test attend une réponse en texte brut, pas en JSON.
     """
-    return jsonify(message="Basic Auth: Access Granted"), 200
+    return "Basic Auth: Access Granted", 200
 
 
 # ---------------------------------------------------------------------
