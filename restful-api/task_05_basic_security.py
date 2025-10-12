@@ -111,7 +111,7 @@ def jwt_protected():
     Route protégée par un jeton JWT.
     Accessible uniquement si le client fournit un token valide.
     """
-    return jsonify(message="JWT Auth: Access Granted"), 200
+    return "JWT Auth: Access Granted", 200
 
 
 @app.route("/admin-only")
