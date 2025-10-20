@@ -1,2 +1,2 @@
--- Supprime la base de donnée hbtn_0c_0
-DELETE DATABASE IF NOT EXISTS hbtn_0c_0
+-- Script qui supprime la base de données hbtn_0c_0 si elle existe
+DROP DATABASE IF EXISTS hbtn_0c_0;
