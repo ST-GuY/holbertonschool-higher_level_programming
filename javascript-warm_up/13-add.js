@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 // Définir la fonction add qui additionne deux entiers
-function add(a, b) {
+function add (a, b) {
   return a + b;
 }
 
