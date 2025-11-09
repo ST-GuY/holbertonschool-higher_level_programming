@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 
 // On calcule le nombre d'arguments passés par l'utilisateur
 // process.argv contient tous les arguments :
