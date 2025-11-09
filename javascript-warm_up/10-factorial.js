@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
-function factorial (n) {
-	// Si n n'est pas un nombre ou est inférieur ou égal à 0, retourner 1
+function factorial(n) {
+  // Si n n'est pas un nombre ou est inférieur ou égal à 0, retourner 1
   if (isNaN(n) || n <= 0) {
     return 1;
   }
