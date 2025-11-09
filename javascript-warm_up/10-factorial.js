@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-function factorial(n) {
+function factorial (n) {
   // Si n n'est pas un nombre ou est inférieur ou égal à 0, retourner 1
   if (isNaN(n) || n <= 0) {
     return 1;
@@ -11,5 +11,6 @@ function factorial(n) {
 
 // Récupérer le premier argument de la ligne de commande et le convertir en entier
 const num = parseInt(process.argv[2]);
+
 // Afficher le résultat de la factorielle
 console.log(factorial(num));
