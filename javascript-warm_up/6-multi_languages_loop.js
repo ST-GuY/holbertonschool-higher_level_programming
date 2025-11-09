@@ -15,4 +15,3 @@ for (let i = 0; i < languages.length; i++) {
 
 // Afficher tout avec une seule console.log
 console.log(output.join('\n'));
-
